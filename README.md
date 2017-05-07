@@ -1,3 +1,3 @@
 # Notefy
 
-A simple note making application for iOS.
+A note making application for iOS.
