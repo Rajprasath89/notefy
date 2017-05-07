@@ -61,7 +61,7 @@
         <!--Notes-->
         <scene sceneID="DQf-hJ-9kG">
             <objects>
-                <viewController title="Notes" id="Mmo-RQ-AnY" sceneMemberID="viewController">
+                <viewController title="Notes" id="Mmo-RQ-AnY" customClass="DetailViewController" customModule="Notefy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MYq-RD-gnf"/>
                         <viewControllerLayoutGuide type="bottom" id="W1O-cQ-fPx"/>
@@ -86,6 +86,9 @@
                             <constraint firstItem="322-PI-kAr" firstAttribute="bottom" secondItem="W1O-cQ-fPx" secondAttribute="top" id="rHb-3R-ibw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="322-PI-kAr" id="cyc-9F-Sjg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1W-Fm-2Xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

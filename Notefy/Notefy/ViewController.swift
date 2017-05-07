@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var table: UITableView!
     var data:[String] = []
+    var selectedRow:Int = -1
     var file:String!
     
     override func viewDidLoad() {
@@ -34,6 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         data.insert(name, at: 0)
         let indexPath:IndexPath = IndexPath(row: 0, section: 0)
         table.insertRows(at: [indexPath], with: .automatic)
+        table.selectRow(at: indexPath, animated: true, scrollPosition: .none)
 //        save()
         self.performSegue(withIdentifier: "detail", sender: nil)
     }
@@ -64,6 +66,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        print("\(data[indexPath.row])")
         self.performSegue(withIdentifier: "detail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailView:DetailViewController = segue.destination as! DetailViewController
+        selectedRow = table.indexPathForSelectedRow!.row
+        detailView.setText(t: data[selectedRow])
     }
     
     func save(){
