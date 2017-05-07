@@ -6,11 +6,7 @@ A note making application for iOS.
 
 Add and edit notes on the go!
 
-![Notefy icon](/assets/edit-mode.png)
-
-![Notefy icon](/assets/delete-mode.png)
-
-![Notefy icon](/assets/add-mode.png)
+<img src="/assets/edit-mode.png" width="400" align="center">
 
 ## Todo
 
