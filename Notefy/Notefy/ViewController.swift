@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var table: UITableView!
     var data:[String] = []
+    var file:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNote))
         self.navigationItem.rightBarButtonItem = addButton
         self.navigationItem.leftBarButtonItem = editButtonItem
+        
+        let docsDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
+        file = docsDir[0].appending("notefy.txt")
         load()
     }
     
@@ -58,15 +62,27 @@ class ViewController: UIViewController, UITableViewDataSource {
     func save(){
 //        Saving to persistant storage
 //        TODO: Save it to cloud
-        UserDefaults.standard.set(data, forKey: "notes")
-        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.set(data, forKey: "notes")
+//        UserDefaults.standard.synchronize()
+        
+        
+        let newData:NSArray = NSArray(array: data)
+        newData.write(toFile: file, atomically: true)
     }
 
     func load(){
-        if let loadedData = UserDefaults.standard.value(forKey: "notes") as? [String] {
+//        Saving to persistant storage
+//        TODO: Save it to cloud
+//        if let loadedData = UserDefaults.standard.value(forKey: "notes") as? [String] {
+//            data = loadedData
+//            table.reloadData()
+//        }
+        
+        if let loadedData = NSArray(contentsOfFile: file) as? [String] {
             data = loadedData
             table.reloadData()
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
