@@ -8,6 +8,8 @@ Add and edit notes on the go!
 
 <img src="/assets/edit-mode.png" width="400" align="center">
 
+<img src="/assets/add-mode.png" width="400" align="center">
+
 ## Todo
 
 - [ ] Sync to server
