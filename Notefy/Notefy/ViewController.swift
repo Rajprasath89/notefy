@@ -34,7 +34,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         data.insert(name, at: 0)
         let indexPath:IndexPath = IndexPath(row: 0, section: 0)
         table.insertRows(at: [indexPath], with: .automatic)
-        save()
+//        save()
+        self.performSegue(withIdentifier: "detail", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,7 +62,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(data[indexPath.row])")
+//        print("\(data[indexPath.row])")
+        self.performSegue(withIdentifier: "detail", sender: nil)
     }
     
     func save(){

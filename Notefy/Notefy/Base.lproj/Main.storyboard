@@ -51,11 +51,45 @@
                     <navigationItem key="navigationItem" id="4zI-c2-nkY"/>
                     <connections>
                         <outlet property="table" destination="7Fm-YV-nBo" id="NIg-Lv-YKd"/>
+                        <segue destination="Mmo-RQ-AnY" kind="show" identifier="detail" id="8O9-aH-fSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="DQf-hJ-9kG">
+            <objects>
+                <viewController title="Notes" id="Mmo-RQ-AnY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MYq-RD-gnf"/>
+                        <viewControllerLayoutGuide type="bottom" id="W1O-cQ-fPx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o0U-8R-bg9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="322-PI-kAr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="322-PI-kAr" firstAttribute="leading" secondItem="o0U-8R-bg9" secondAttribute="leading" id="ZRA-qb-oOl"/>
+                            <constraint firstAttribute="trailing" secondItem="322-PI-kAr" secondAttribute="trailing" id="lsM-U4-69g"/>
+                            <constraint firstItem="322-PI-kAr" firstAttribute="top" secondItem="o0U-8R-bg9" secondAttribute="top" id="n3a-Qt-S6r"/>
+                            <constraint firstItem="322-PI-kAr" firstAttribute="bottom" secondItem="W1O-cQ-fPx" secondAttribute="top" id="rHb-3R-ibw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1W-Fm-2Xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="36.431784107946029"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1oD-97-t8A">
