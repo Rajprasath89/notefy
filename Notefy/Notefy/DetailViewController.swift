@@ -19,6 +19,7 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         textView.text = text
+        textView.becomeFirstResponder()
     }
 
     func setText(t: String){
